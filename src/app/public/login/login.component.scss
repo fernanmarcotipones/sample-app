@@ -1,0 +1,10 @@
+@import '/src/styles/variables.scss';
+
+#login {
+  height: 100vh;;
+  background: url('/assets/images/login.jpg') center/cover no-repeat fixed;
+
+  form {
+    background-color: rgba($color-light, 30%);
+  }
+}

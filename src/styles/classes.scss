@@ -1,0 +1,26 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
+
+$max: 100;
+$unit: 1%;
+$interval: 5;
+$cycle: $max/$interval;
+$sizes: ('xs', 'sm', 'md', 'lg', 'xl', 'xxl');
+
+// Generate width classes from $interval to $max
+@for $i from 1 through $cycle {
+  $value: $i * $interval;
+
+  .w-#{$value} {
+    width: $value * $unit;
+  }
+
+  @each $size in $sizes {
+    @include media-breakpoint-down($size) {
+      .w-#{$value}-#{$size} {
+        width: $value * $unit !important;
+      }
+    }
+  }
+}
