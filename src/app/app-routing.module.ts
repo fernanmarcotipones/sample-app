@@ -6,6 +6,10 @@ const routes: Routes = [
     path: 'public',
     loadChildren: () => import('./public/public.module').then(m => m.PublicModule),
   },
+  {
+    path: 'main',
+    loadChildren: () => import('./main/main.module').then(m => m.MainModule),
+  },
 ];
 
 @NgModule({
