@@ -7,7 +7,12 @@ import { UserService } from "./user.service";
 export class AuthService {
   public currentUser!: User;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService) {
+    const userId = window.localStorage.getItem('sample-userId');
+    if (userId && !this.currentUser) {
+      this.userService.getUser(userId).then(user => this.currentUser = user);
+    }
+  }
 
   public login(username: string, password: string): boolean {
     const userData = this.userService.userData;

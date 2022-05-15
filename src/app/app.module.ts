@@ -9,9 +9,7 @@ import { PublicModule } from './public/public.module';
 import { ServicesModule } from './services/services.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

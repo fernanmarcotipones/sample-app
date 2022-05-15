@@ -11,13 +11,18 @@ export class AppComponent implements OnInit, OnDestroy {
 
   public userDataSub!: Subscription;
 
+  public isDataLoaded: boolean = false;
+
   constructor(
     private userService: UserService,
   ) { }
 
   public ngOnInit(): void {
     this.userDataSub = this.userService.getAllUsers()
-    .subscribe(users => this.userService.setUserData(users));
+    .subscribe(users => {
+      this.userService.setUserData(users);
+      this.isDataLoaded = true;
+    });
   }
 
   public ngOnDestroy(): void {

@@ -1,0 +1,11 @@
+<div *ngIf="user" id="user-card" class="card">
+  <div class="card-body">
+    <div class="d-flex justify-content-between">
+      <span class="name">{{user.name | fullName}}</span>
+      <span class="type {{user.type}} ml-auto">{{user.type | titlecase}}</span>
+    </div>
+  </div>
+  <div class="card-footer">
+    Footer
+  </div>
+</div>

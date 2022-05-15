@@ -1,1 +1,27 @@
-<p>users works!</p>
+<div id="users" class="py-5">
+  <ng-container *ngIf="users?.length; else noData;">
+    <div class="row">
+      <div *ngFor="let user of usersPagination;" class="col-12 col-md-6 col-lg-4 mb-3">
+        <app-user-card [user]="user"></app-user-card>
+      </div>
+    </div>
+    <div class="row">
+      <ul class="pagination justify-content-end">
+        <li class="page-item" [ngClass]="{'disabled': activePage === 1}">
+          <button class="page-link" (click)="setActivePage(activePage - 1)" [disabled]="activePage === 1">Previous</button>
+        </li>
+        <li *ngFor="let num of [].constructor(pages);let i = index;" class="page-item">
+          <button class="page-link" (click)="setActivePage(i+1)">{{i+1}}</button>
+        </li>
+        <li class="page-item" [ngClass]="{'disabled': activePage === pages}">
+          <button class="page-link" (click)="setActivePage(activePage + 1)" [disabled]="activePage === pages">Next</button>
+        </li>
+      </ul>
+    </div>
+  </ng-container>
+  <ng-template #noData>
+    <div class="h-100 flex-center">
+      <h1>No Data</h1>
+    </div>
+  </ng-template>
+</div>

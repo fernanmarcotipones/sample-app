@@ -1,4 +1,4 @@
-interface Name {
+export interface Name {
   first: string;
   middle?: string;
   last: string;

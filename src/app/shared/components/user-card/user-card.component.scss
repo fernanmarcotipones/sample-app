@@ -1,0 +1,13 @@
+@import '/src/styles/variables.scss';
+
+#user-card {
+  .name, .type {
+    font-weight: bold;
+  }
+
+  .type {
+    &.ADMIN { color: $color-danger }
+    &.DEV { color: $color-success }
+    &.STAFF { color: $color-primary }
+  }
+}
