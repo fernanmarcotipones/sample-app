@@ -1,0 +1,182 @@
+[
+  {
+    "id": "6280e909ae22497de06b8a41",
+    "name": {
+      "first": "Melendez",
+      "middle": "Glass",
+      "last": "Scott"
+    },
+    "email": "zimmerman@testcompany.com",
+    "username": "glass",
+    "password": "123456",
+    "address": "82 Livingston Street, Kraemer, Maine",
+    "type": "DEV",
+    "createdAt": "2019-09-20T23:37:13.641Z",
+    "updatedAt": "2019-09-21T23:37:13.641Z"
+  },
+  {
+    "id": "6280e909d75e8d8e8894a1ce",
+    "name": {
+      "first": "Baxter",
+      "middle": "",
+      "last": "Morrow"
+    },
+    "email": "franks@testcompany.com",
+    "username": "josefina",
+    "password": "123456",
+    "address": "23 Wakeman Place, Lowgap, Mississippi",
+    "type": "ADMIN",
+    "createdAt": "2016-05-07T00:32:02.949Z",
+    "updatedAt": "2016-05-08T00:32:02.949Z"
+  },
+  {
+    "id": "6280e9097e11e3e1f624b403",
+    "name": {
+      "first": "Sawyer",
+      "middle": "Weeks",
+      "last": "Patrick"
+    },
+    "email": "berger@testcompany.com",
+    "username": "jacobson",
+    "password": "123456",
+    "address": "13 Keap Street, Independence, Guam",
+    "type": "DEV",
+    "createdAt": "2021-11-01T02:53:49.594Z",
+    "updatedAt": "2021-11-02T02:53:49.594Z"
+  },
+  {
+    "id": "6280e90993bc91e269a34c5b",
+    "name": {
+      "first": "Hinton",
+      "middle": "",
+      "last": "Baird"
+    },
+    "email": "franklin@testcompany.com",
+    "username": "lang",
+    "password": "123456",
+    "address": "81 Middagh Street, Baker, Oklahoma",
+    "type": "DEV",
+    "createdAt": "2015-09-17T13:35:38.510Z",
+    "updatedAt": "2015-09-18T13:35:38.510Z"
+  },
+  {
+    "id": "6280e909eb012202e66f8477",
+    "name": {
+      "first": "Perry",
+      "middle": "Chaney",
+      "last": "Tran"
+    },
+    "email": "jeannine@testcompany.com",
+    "username": "cobb",
+    "password": "123456",
+    "address": "99 Irving Place, Nipinnawasee, Louisiana",
+    "type": "ADMIN",
+    "createdAt": "2014-12-02T02:08:49.498Z",
+    "updatedAt": "2014-12-03T02:08:49.498Z"
+  },
+  {
+    "id": "6280e90988113f54f0bf09b1",
+    "name": {
+      "first": "Campos",
+      "middle": "Sanchez",
+      "last": "Ramirez"
+    },
+    "email": "mcclain@testcompany.com",
+    "username": "lottie",
+    "password": "123456",
+    "address": "52 Rockwell Place, Belvoir, Hawaii",
+    "type": "ADMIN",
+    "createdAt": "2019-08-28T17:21:34.561Z",
+    "updatedAt": "2019-08-29T17:21:34.561Z"
+  },
+  {
+    "id": "6280e90973aae10eb0282428",
+    "name": {
+      "first": "Wilda",
+      "middle": "Buchanan",
+      "last": "Perry"
+    },
+    "email": "campbell@testcompany.com",
+    "username": "effie",
+    "password": "123456",
+    "address": "16 Forrest Street, Madrid, Connecticut",
+    "type": "DEV",
+    "createdAt": "2018-01-15T00:18:27.762Z",
+    "updatedAt": "2018-01-16T00:18:27.762Z"
+  },
+  {
+    "id": "6280e909e47b381aec176b25",
+    "name": {
+      "first": "Thompson",
+      "middle": "Sampson",
+      "last": "Wolf"
+    },
+    "email": "mcgowan@testcompany.com",
+    "username": "tyson",
+    "password": "123456",
+    "address": "77 Stone Avenue, Makena, American Samoa",
+    "type": "DEV",
+    "createdAt": "2015-08-27T20:13:32.669Z",
+    "updatedAt": "2015-08-28T20:13:32.669Z"
+  },
+  {
+    "id": "6280e909947d6ab64218e077",
+    "name": {
+      "first": "Zelma",
+      "middle": "Oliver",
+      "last": "Howell"
+    },
+    "email": "mccray@testcompany.com",
+    "username": "luz",
+    "password": "123456",
+    "address": "100 Haring Street, Barronett, West Virginia",
+    "type": "DEV",
+    "createdAt": "2018-11-29T07:49:17.056Z",
+    "updatedAt": "2018-11-30T07:49:17.056Z"
+  },
+  {
+    "id": "6280e909d15facf913015d83",
+    "name": {
+      "first": "Dudley",
+      "middle": "Newman",
+      "last": "Mcpherson"
+    },
+    "email": "haley@testcompany.com",
+    "username": "carver",
+    "password": "123456",
+    "address": "44 Mill Avenue, Boomer, Illinois",
+    "type": "ADMIN",
+    "createdAt": "2020-05-15T13:44:38.830Z",
+    "updatedAt": "2020-05-16T13:44:38.830Z"
+  },
+  {
+    "id": "6280e909b9e8138dc2d6b9b1",
+    "name": {
+      "first": "Stephenson",
+      "middle": "Burks",
+      "last": "Albert"
+    },
+    "email": "clark@testcompany.com",
+    "username": "lindsay",
+    "password": "123456",
+    "address": "55 Florence Avenue, Cuylerville, Pennsylvania",
+    "type": "STAFF",
+    "createdAt": "2013-08-15T05:55:58.347Z",
+    "updatedAt": "2013-08-16T05:55:58.347Z"
+  },
+  {
+    "id": "6280e9098a7900a0302f9dbd",
+    "name": {
+      "first": "Mueller",
+      "middle": "",
+      "last": "Moore"
+    },
+    "email": "roxanne@testcompany.com",
+    "username": "skinner",
+    "password": "123456",
+    "address": "70 Woodbine Street, Groveville, Texas",
+    "type": "STAFF",
+    "createdAt": "2016-01-22T20:20:04.799Z",
+    "updatedAt": "2016-01-23T20:20:04.799Z"
+  }
+]

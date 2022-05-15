@@ -6,5 +6,10 @@
 
   form {
     background-color: rgba($color-light, 30%);
+
+    .invalid-text {
+      text-align: center;
+      color: $color-danger;
+    }
   }
 }
