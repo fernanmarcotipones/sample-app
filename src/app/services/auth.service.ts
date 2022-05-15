@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { clone } from "lodash";
-import { DEFAULT_USER, User } from "../models/user";
+import { DEFAULT_USER, User, UserType } from "../models/user";
 import { UserService } from "./user.service";
 
 @Injectable()
@@ -17,13 +17,17 @@ export class AuthService {
       return false;
     }
 
-    window.localStorage.setItem('userId', user.id);
+    window.localStorage.setItem('sample-userId', user.id);
     this.currentUser = user;
     return true;
   }
 
   public logout(): void {
     this.currentUser = clone(DEFAULT_USER);
-    window.localStorage.removeItem('userId');
+    window.localStorage.removeItem('sample-userId');
+  }
+
+  public isAdmin(): boolean {
+    return this.currentUser?.type === UserType.Admin;
   }
 }

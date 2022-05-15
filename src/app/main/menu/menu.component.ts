@@ -14,6 +14,10 @@ export class MenuComponent implements OnInit {
     private authService: AuthService,
     ) { }
 
+  public get isAdmin(): boolean {
+    return this.authService.isAdmin();
+  }
+
   public ngOnInit(): void {
   }
 

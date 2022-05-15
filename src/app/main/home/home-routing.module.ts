@@ -7,7 +7,7 @@ import { StaffComponent } from './staff/staff.component';
 const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'dev', component: DevComponent },
-  { path: 'vendor', component: StaffComponent },
+  { path: 'staff', component: StaffComponent },
 ];
 
 @NgModule({

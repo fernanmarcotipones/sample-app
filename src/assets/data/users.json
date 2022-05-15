@@ -7,7 +7,7 @@
       "last": "Scott"
     },
     "email": "zimmerman@testcompany.com",
-    "username": "glass",
+    "username": "dev",
     "password": "123456",
     "address": "82 Livingston Street, Kraemer, Maine",
     "type": "DEV",
@@ -22,7 +22,7 @@
       "last": "Morrow"
     },
     "email": "franks@testcompany.com",
-    "username": "josefina",
+    "username": "admin",
     "password": "123456",
     "address": "23 Wakeman Place, Lowgap, Mississippi",
     "type": "ADMIN",
@@ -37,10 +37,10 @@
       "last": "Patrick"
     },
     "email": "berger@testcompany.com",
-    "username": "jacobson",
+    "username": "staff",
     "password": "123456",
     "address": "13 Keap Street, Independence, Guam",
-    "type": "DEV",
+    "type": "STAFF",
     "createdAt": "2021-11-01T02:53:49.594Z",
     "updatedAt": "2021-11-02T02:53:49.594Z"
   },
