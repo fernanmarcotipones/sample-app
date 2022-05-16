@@ -22,6 +22,12 @@ export enum UserType {
   Staff = 'STAFF'
 }
 
+export const USER_TYPE_SELECT = [
+  { label: 'Admin', value: UserType.Admin },
+  { label: 'Dev', value: UserType.Dev },
+  { label: 'Staff', value: UserType.Staff },
+];
+
 export const DEFAULT_USER: User = {
   'id': '',
   'name': {

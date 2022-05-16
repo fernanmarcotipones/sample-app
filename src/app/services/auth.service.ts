@@ -7,8 +7,11 @@ import { UserService } from "./user.service";
 export class AuthService {
   public currentUser!: User;
 
+  public currentUserId!: string;
+
   constructor(private userService: UserService) {
     const userId = window.localStorage.getItem('sample-userId');
+    this.currentUserId = userId ? userId : '';
     if (userId && !this.currentUser) {
       this.userService.getUser(userId).then(user => this.currentUser = user);
     }
@@ -34,5 +37,20 @@ export class AuthService {
 
   public isAdmin(): boolean {
     return this.currentUser?.type === UserType.Admin;
+  }
+
+  public async getCurrentUser(): Promise<User> {
+    if (this.currentUser) {
+      return this.currentUser;
+    }
+
+    const user = await this.userService.getUser(this.currentUserId);
+
+    if (!user) {
+      return clone(DEFAULT_USER);
+    }
+
+    this.currentUser = user;
+    return user;
   }
 }

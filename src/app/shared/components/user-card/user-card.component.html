@@ -4,8 +4,16 @@
       <span class="name">{{user.name | fullName}}</span>
       <span class="type {{user.type}} ml-auto">{{user.type | titlecase}}</span>
     </div>
+    <hr>
+    <div class="mt-2">
+      <span>{{user.email}}</span>
+    </div>
+    <div class="mt-2">
+      <span>{{user.address}}</span>
+    </div>
   </div>
-  <div class="card-footer">
-    Footer
+  <div *ngIf="showActions" class="card-footer p-0 d-flex justify-content-end">
+    <button class="btn btn-primary rounded-0" [disabled]="!allowEdit" (click)="editUser(user.id)"><i class="fa fa-edit"></i></button>
+    <button class="btn btn-danger rounded-0" [disabled]="!allowDelete" (click)="deleteUser(user.id)"><i class="fa fa-times"></i></button>
   </div>
 </div>

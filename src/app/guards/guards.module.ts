@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthGuard } from './auth.guard';
 import { UserGuard } from './user.guard';
+import { AdminGuard } from './admin.guard';
 
 @NgModule({
   declarations: [],
@@ -11,6 +12,7 @@ import { UserGuard } from './user.guard';
   providers: [
     AuthGuard,
     UserGuard,
+    AdminGuard,
   ],
 })
 export class GuardsModule { }

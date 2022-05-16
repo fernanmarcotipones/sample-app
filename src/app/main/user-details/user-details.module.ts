@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MyProfileComponent } from './my-profile.component';
+import { UserDetailsComponent } from './user-details.component';
 import { UserFormModule } from 'src/app/shared/components/user-form/user-form.module';
-import { UserCardModule } from 'src/app/shared/components/user-card/user-card.module';
 
 @NgModule({
-  declarations: [MyProfileComponent],
+  declarations: [
+    UserDetailsComponent
+  ],
   imports: [
     CommonModule,
     UserFormModule,
-    UserCardModule,
   ]
 })
-export class MyProfileModule { }
+export class UserDetailsModule { }

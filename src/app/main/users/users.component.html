@@ -1,8 +1,14 @@
 <div id="users" class="py-5">
+  <h1 class="mb-5">User List</h1>
   <ng-container *ngIf="users?.length; else noData;">
     <div class="row">
       <div *ngFor="let user of usersPagination;" class="col-12 col-md-6 col-lg-4 mb-3">
-        <app-user-card [user]="user"></app-user-card>
+        <app-user-card 
+          [user]="user" 
+          [allowDelete]="currentUserId !== user.id" 
+          (onEdit)="editUser($event)" 
+          (onDelete)="deleteUser($event)">
+        </app-user-card>
       </div>
     </div>
     <div class="row">
