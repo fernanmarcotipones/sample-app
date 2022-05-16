@@ -1,7 +1,5 @@
 <div id="my-profile" class="p-5">
   <h1 class="mb-5">My Profile</h1>
-  <div class="mb-3">
-    <app-user-card [user]="user" [showActions]="false"></app-user-card>
-  </div>
+  <app-user-card class="mb-3" [user]="user" [showActions]="false"></app-user-card>
   <app-user-form [user]="user" [showCancel]="false" (onSave)="saveUser($event)"></app-user-form>
 </div>

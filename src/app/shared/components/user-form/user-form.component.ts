@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { cloneDeep } from 'lodash';
-import { User, USER_TYPE_SELECT } from 'src/app/models/user';
+import { User, UserType, USER_TYPE_SELECT } from 'src/app/models/user';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-user-form',
@@ -18,7 +19,9 @@ export class UserFormComponent implements OnInit, OnChanges {
 
   public localUser!: User;
 
-  public userTypes = cloneDeep(USER_TYPE_SELECT);
+  public userTypesOptions = cloneDeep(USER_TYPE_SELECT);
+
+  public userType = UserType;
 
   @Output()
   public onSave = new EventEmitter<User>();
@@ -26,7 +29,13 @@ export class UserFormComponent implements OnInit, OnChanges {
   @Output()
   public onCancel = new EventEmitter<void>();
 
-  constructor() { }
+  public get isAdmin(): boolean {
+    return this.authService.isAdmin();
+  }
+
+  constructor(
+    private authService: AuthService,
+  ) { }
 
   public ngOnInit(): void {
   }

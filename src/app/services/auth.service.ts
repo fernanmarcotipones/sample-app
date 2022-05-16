@@ -27,11 +27,13 @@ export class AuthService {
 
     window.localStorage.setItem('sample-userId', user.id);
     this.currentUser = user;
+    this.currentUserId = user.id;
     return true;
   }
 
   public logout(): void {
     this.currentUser = clone(DEFAULT_USER);
+    this.currentUserId = '';
     window.localStorage.removeItem('sample-userId');
   }
 
@@ -40,10 +42,6 @@ export class AuthService {
   }
 
   public async getCurrentUser(): Promise<User> {
-    if (this.currentUser) {
-      return this.currentUser;
-    }
-
     const user = await this.userService.getUser(this.currentUserId);
 
     if (!user) {

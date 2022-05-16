@@ -5,7 +5,7 @@
       <div *ngFor="let user of usersPagination;" class="col-12 col-md-6 col-lg-4 mb-3">
         <app-user-card 
           [user]="user" 
-          [allowDelete]="currentUserId !== user.id" 
+          [allowDelete]="currentUserId !== user.id && user.type !== userType.Admin" 
           (onEdit)="editUser($event)" 
           (onDelete)="deleteUser($event)">
         </app-user-card>

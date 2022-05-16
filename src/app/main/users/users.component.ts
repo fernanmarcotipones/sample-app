@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { cloneDeep } from 'lodash';
-import { User } from 'src/app/models/user';
+import { User, UserType } from 'src/app/models/user';
 import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -24,6 +24,8 @@ export class UsersComponent implements OnInit {
 
   public pageLimit: number = 9;
 
+  public userType = UserType;
+
   constructor(
     private userService: UserService,
     private authService: AuthService,
@@ -31,7 +33,6 @@ export class UsersComponent implements OnInit {
   ) { }
 
   public ngOnInit(): void {
-    this.users = cloneDeep(this.userService.userData);
     this.currentUserId = this.authService.currentUserId;
     this.setupPagination();
   }
@@ -53,12 +54,14 @@ export class UsersComponent implements OnInit {
    const isConfirmed = confirm("Are you sure you want to delete this user ?");
     
     if(isConfirmed) {
-      // Delete method here
+      this.userService.deleteUser(userId);
       this.setupPagination();
     }
   }
 
   private setupPagination(): void {
+    this.users = cloneDeep(this.userService.userData);
+
     this.usersPagination = cloneDeep(this.users);
     this.pages = Math.ceil(this.users.length / this.pageLimit);
 
